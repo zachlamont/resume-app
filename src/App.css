@@ -40,3 +40,43 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ---------------------------------------------------------------- */
+
+.App {
+  width: 80vw;
+}
+.details-section {
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.education-section {
+  background-color: rgb(123, 231, 240);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.education-card {
+  background-color: rgb(170, 242, 243);
+  margin: 10px;
+  border-radius: 5px;
+}
+.experience-section {
+  background-color: rgb(181, 126, 245);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.experience-card {
+  background-color: rgb(201, 173, 242);
+  margin: 10px;
+  border-radius: 5px;
+}
+.name-section {
+  background-color: rgb(187, 241, 140);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
