@@ -1,8 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  width: 100%;
+  background-color: rgb(37, 61, 94);
 }
 
 .logo {
@@ -44,39 +43,130 @@
 /* ---------------------------------------------------------------- */
 
 .App {
-  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(246, 243, 240);
+  width: 100%;
+  padding: 10px;
+}
+h1 {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+h2 {
+  color: rgb(37, 61, 94);
+}
+h3 {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.name {
+  color: rgb(37, 61, 94);
+}
+p {
+  font-size: 0.9em;
+}
+.description {
+  font-size: 0.8em;
+  color: #888;
 }
 .details-section {
-  background-color: aquamarine;
-  padding: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  padding: 0 4em 0 2em;
   margin: 10px;
   border-radius: 8px;
 }
 .education-section {
-  background-color: rgb(123, 231, 240);
-  padding: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 30px 10px 30px;
   margin: 10px;
   border-radius: 8px;
 }
 .education-card {
-  background-color: rgb(170, 242, 243);
+  position: relative;
+  background-color: rgb(255, 255, 255);
   margin: 10px;
   border-radius: 5px;
 }
 .experience-section {
-  background-color: rgb(181, 126, 245);
-  padding: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 30px 10px 30px;
   margin: 10px;
   border-radius: 8px;
 }
 .experience-card {
-  background-color: rgb(201, 173, 242);
+  position: relative;
+  background-color: rgb(255, 255, 255);
   margin: 10px;
   border-radius: 5px;
 }
 .name-section {
-  background-color: rgb(187, 241, 140);
-  padding: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 0 40px 0 40px;
   margin: 10px;
   border-radius: 8px;
+}
+.edit-button {
+  position: absolute; /* Add this property */
+  top: 0px; /* Align to the top */
+  right: 0px; /* Align to the right */
+}
+.delete-button {
+  position: absolute; /* Add this property */
+  top: 10px; /* Align to the top */
+  right: 10px; /* Align to the right */
+}
+
+/* Modal Styling */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px 45px 30px 30px;
+  border-radius: 5px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #1ba8ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

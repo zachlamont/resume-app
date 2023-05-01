@@ -1,14 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const EducationSection = () => {
-  const [educationList, setEducationList] = useState([]);
+  const [educationList, setEducationList] = useState([
+    {
+      degree: "Bachelor of Digital Arts",
+      endDate: "Dec 2013",
+      location: "Canberra, ACT",
+      school: "Australian National University",
+      startDate: "Feb 2011",
+    },
+    {
+      degree: "Bachelor of Science (Hons)",
+      endDate: "Dec 2016",
+      location: "Canberra, ACT",
+      school: "Australian National University",
+      startDate: "Feb 2014",
+    },
+  ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newEducation, setNewEducation] = useState({
-    school: '',
-    degree: '',
-    startDate: '',
-    endDate: '',
-    location: ''
+    school: "",
+    degree: "",
+    startDate: "",
+    endDate: "",
+    location: "",
   });
 
   const handleAddClick = () => {
@@ -23,7 +38,7 @@ const EducationSection = () => {
     const { name, value } = e.target;
     setNewEducation((prevEducation) => ({
       ...prevEducation,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -31,11 +46,11 @@ const EducationSection = () => {
     e.preventDefault();
     setEducationList([...educationList, newEducation]);
     setNewEducation({
-      school: '',
-      degree: '',
-      startDate: '',
-      endDate: '',
-      location: ''
+      school: "",
+      degree: "",
+      startDate: "",
+      endDate: "",
+      location: "",
     });
     setIsModalOpen(false);
   };
@@ -46,10 +61,11 @@ const EducationSection = () => {
   };
 
   return (
-    <div className='education-section'>
-      <h2>Education Section</h2>
-      <button onClick={handleAddClick}>Add</button>
-
+    <div className="education-section">
+      <h2>Education</h2>
+      <button onClick={handleAddClick} className="edit-button">
+        Add
+      </button>
       {educationList.map((education, index) => (
         <EducationCard
           key={index}
@@ -61,9 +77,7 @@ const EducationSection = () => {
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <button className="close-button" onClick={handleCloseModal}>
-              Close
-            </button>
+            
             <form onSubmit={handleSubmit}>
               <label>
                 School:
@@ -111,6 +125,9 @@ const EducationSection = () => {
                 />
               </label>
               <button type="submit">Submit</button>
+              <button className="close-button" onClick={handleCloseModal}>
+              Close
+            </button>
             </form>
           </div>
         </div>
@@ -122,15 +139,15 @@ const EducationSection = () => {
 const EducationCard = ({ education, onDelete }) => {
   return (
     <div className="education-card">
-      <p>School: {education.school}</p>
-      <p>Degree: {education.degree}</p>
-      <p>Start Date: {education.startDate}</p>
-      <p>End Date: {education.endDate}</p>
-      <p>Location: {education.location}</p>
-      <button onClick={onDelete}>Delete</button>
+       <h3>{education.degree} | {education.startDate} - {education.endDate}</h3>
+      <p>{education.school}</p>
+      <p>{education.location}</p>
+      <hr />
+      <button onClick={onDelete} className="delete-button">
+        Delete
+      </button>
     </div>
   );
 };
 
 export default EducationSection;
-

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import DetailsSection from "./DetailsSection";
 
 const NameSection = () => {
-  const [name, setName] = useState("Zach");
-  const [profile, setProfile] = useState("Developer");
+  const [name, setName] = useState("Zach Lamont");
+  const [profile, setProfile] = useState(
+    "I am a versatile professional with expertise in the water industry, front-end development, and music production. With a strong background in water quality management for urban water utilities, I possess a deep understanding of ensuring safe and sustainable water resources. My skills encompass water treatment processes, quality monitoring, and regulatory compliance."
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newName, setNewName] = useState("");
   const [newProfile, setNewProfile] = useState("");
@@ -38,15 +41,14 @@ const NameSection = () => {
 
   return (
     <div className="name-section">
-      <h2>Name Section</h2>
-      <button onClick={handleEditClick}>Edit</button>
+      <button onClick={handleEditClick} className="edit-button">
+        Edit
+      </button>
 
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <button className="close-button" onClick={handleCloseModal}>
-              Close
-            </button>
+            
             <form onSubmit={handleSubmit}>
               <label>
                 Name:
@@ -65,15 +67,18 @@ const NameSection = () => {
                 />
               </label>
               <button type="submit">Submit</button>
+              <button className="close-button" onClick={handleCloseModal}>
+              Close
+            </button>
             </form>
           </div>
         </div>
       )}
 
       <div>
-        <h3>Details</h3>
-        <p>Name: {name}</p>
-        <p>Profile: {profile}</p>
+        <h1 className="name">{name}</h1>
+        <DetailsSection />
+        <p>{profile}</p>
       </div>
     </div>
   );
