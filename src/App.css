@@ -136,7 +136,6 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  
 }
 
 .modal-content {
@@ -169,4 +168,10 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media print {
+  .print-hidden {
+    display: none;
+  }
 }

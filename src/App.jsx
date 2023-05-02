@@ -8,6 +8,9 @@ import NameSection from "./components/NameSection";
 
 function App() {
   const [count, setCount] = useState(0);
+  const handlePrint = () => {
+    window.print();
+  };
 
   return (
     <>
@@ -19,14 +22,13 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1> Resume App </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
 
       {/* ---------------------------------------------------------- */}
+      <h1 className="print-hidden"> Resume App </h1>
+
+      <button className="print-hidden" onClick={handlePrint}>
+        Print Resume
+      </button>
 
       <div className="App">
         <NameSection />

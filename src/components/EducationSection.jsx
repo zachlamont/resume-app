@@ -63,7 +63,7 @@ const EducationSection = () => {
   return (
     <div className="education-section">
       <h2>Education</h2>
-      <button onClick={handleAddClick} className="edit-button">
+      <button onClick={handleAddClick} className="edit-button print-hidden">
         Add
       </button>
       {educationList.map((education, index) => (
@@ -143,7 +143,7 @@ const EducationCard = ({ education, onDelete }) => {
       <p>{education.school}</p>
       <p>{education.location}</p>
       <hr />
-      <button onClick={onDelete} className="delete-button">
+      <button onClick={onDelete} className="delete-button print-hidden">
         Delete
       </button>
     </div>

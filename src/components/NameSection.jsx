@@ -41,7 +41,7 @@ const NameSection = () => {
 
   return (
     <div className="name-section">
-      <button onClick={handleEditClick} className="edit-button">
+      <button onClick={handleEditClick} className="edit-button print-hidden">
         Edit
       </button>
 

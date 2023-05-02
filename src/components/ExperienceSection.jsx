@@ -68,7 +68,7 @@ const ExperienceSection = () => {
   return (
     <div className="experience-section">
       <h2>Experience</h2>
-      <button onClick={handleAddClick} className="edit-button">
+      <button onClick={handleAddClick} className="edit-button print-hidden">
         Add
       </button>
 
@@ -158,7 +158,7 @@ const ExperienceCard = ({ experience, onDelete }) => {
       <p>{experience.location}</p>
       <p className="description">{experience.description}</p>
       <hr />
-      <button onClick={onDelete} className='delete-button'>Delete</button>
+      <button onClick={onDelete} className='delete-button print-hidden'>Delete</button>
     </div>
   );
 };

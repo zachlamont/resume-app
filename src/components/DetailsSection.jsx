@@ -42,7 +42,7 @@ const DetailsSection = () => {
       <p>{details.phone}</p>
       <p>|</p>
       <p>{details.website}</p>
-      <button onClick={handleEditClick} className="edit-button">Edit</button>
+      <button onClick={handleEditClick} className="edit-button print-hidden">Edit</button>
 
       {isModalOpen && (
         <div className="modal">
